@@ -1,0 +1,14 @@
+{
+    "name": "packs/ticket",
+    "description": "ticket package for laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "omidzaheh",
+            "email": "omidzahed.dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
