@@ -1,7 +1,8 @@
 <?php
 
+use Illuminate\Support\ServiceProvider;
 
-class TicketServiceProvider
+class TicketServiceProvider extends ServiceProvider
 {
 
 }
