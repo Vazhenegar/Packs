@@ -1,7 +1,7 @@
-#Change logs
-##doing
+# Changelog
+## doing
 -add ticket package
-##todo
+## todo
 
-##done
+## done
 - add the auth 
