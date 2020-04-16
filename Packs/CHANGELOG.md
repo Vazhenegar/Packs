@@ -1,6 +1,6 @@
 # Changelog
 ## doing
--add ticket package
+- add ticket package
 ## todo
 
 ## done
