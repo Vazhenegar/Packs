@@ -11,15 +11,18 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form">
+        <form role="form" method="post" enctype="multipart/form-data">
+
             <div class="card-body row">
                 <div class="form-group col-6">
                     <label>عنوان</label>
-                    <input type="text" class="form-control"  placeholder="عنوان را وارد کنید">
+
+                    @csrf
+                    <input type="text" class="form-control"  name="title" placeholder="عنوان را وارد کنید">
                 </div>
                 <div class="form-group col-6">
                     <label>انتخاب دسته بندی</label>
-                    <select class="form-control">
+                    <select class="form-control" name="category">
                         <option>گزینه ۱</option>
                         <option>گزینه ۲</option>
                         <option>گزینه ۳</option>
@@ -30,13 +33,13 @@
 
                 <div class="form-group col-12">
                     <label for="exampleInputPassword1">پیام </label>
-                    <textarea class="form-control" style="min-height: 150px;" placeholder="پیام خود را وارد کنید"></textarea>
+                    <textarea class="form-control" style="min-height: 150px;" name="message" placeholder="پیام خود را وارد کنید"></textarea>
                 </div>
 
 
                 <div class="form-group col-6">
                     <label>انتخاب اولویت</label>
-                    <select class="form-control">
+                    <select class="form-control" name="priority">
                         <option>گزینه ۱</option>
                         <option>گزینه ۲</option>
                         <option>گزینه ۳</option>
@@ -48,7 +51,7 @@
                     <label for="exampleInputFile"> فایل  زمیمه</label>
                     <div class="input-group">
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="exampleInputFile">
+                            <input type="file" class="custom-file-input" name="file_attach">
                             <label class="custom-file-label" for="exampleInputFile">انتخاب فایل</label>
                         </div>
 
@@ -72,6 +75,16 @@
             <!-- /.card-body -->
 
 
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
         </form>
     </div>
     <!-- /.card -->

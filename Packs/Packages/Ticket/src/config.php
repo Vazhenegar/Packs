@@ -16,9 +16,9 @@ return [
         ],
         "name"=>[
                 'ticket_list' =>"ticket_list",
-                'single_ticket' => "single_ticket",
+                'single_ticket_admin' => "single_ticket",
                 'ticket_setting'=>"ticket_setting",
-                "single_ticket"=>"user_single_ticket",
+                "single_ticket_user"=>"user_single_ticket",
                 "list_ticket"=>"list_ticket",
                 "ticket_add"=>"ticket_add"
         ]

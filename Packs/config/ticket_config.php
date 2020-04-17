@@ -16,9 +16,9 @@ return [
         ],
         "name"=>[
             'ticket_list' =>"ticket_list",
-            'single_ticket' => "single_ticket",
+            'single_ticket_admin' => "single_ticket",
             'ticket_setting'=>"ticket_setting",
-            "single_ticket"=>"user_single_ticket",
+            "single_ticket_user"=>"user_single_ticket",
             "list_ticket"=>"list_ticket",
             "ticket_add"=>"ticket_add"
         ]
@@ -27,8 +27,8 @@ return [
         //todo:add controller to config
     ],
     "reCAPTCHA"=>[
-        'SITE_KEY'=>"6LfWN-oUAAAAALaVQV0Yv1-YCaLo54J-6AmZF5Kz",
-        'SECRET_KEY'=>"6LfWN-oUAAAAAGpV9iJ6rZuOvjU9NH2MkWquPST2"
+        ['SITE_KEY'=>"6LfWN-oUAAAAALaVQV0Yv1-YCaLo54J-6AmZF5Kz"],
+        ['SECRET_KEY'=>"6LfWN-oUAAAAAGpV9iJ6rZuOvjU9NH2MkWquPST2"]
     ]
 
 
