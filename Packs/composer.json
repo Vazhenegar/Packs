@@ -44,7 +44,9 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "packs\\ticket\\": "Packages/Ticket/src"
+
         }
     },
     "minimum-stability": "dev",
