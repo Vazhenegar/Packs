@@ -4,7 +4,7 @@ return [
 
     'view' => [
         "admin"=>[
-            'ticket_list' =>"admin/ticket_panel/{col?}/{order?}/{category?}/{type?}",
+            'ticket_list' =>"admin/ticket_panel/{col?}/{order?}/{priority?}/{category?}",
             'single_ticket' => "admin/single_ticket/{ticket}",
             'ticket_setting'=>"admin/ticketSetting",
 
@@ -15,7 +15,7 @@ return [
             "ticket_add"=>"tickets_add"
         ],
         "name"=>[
-            'ticket_list' =>"ticket_list",
+            'ticket_list' =>"admin_ticket_list",
             'single_ticket_admin' => "single_ticket",
             'ticket_setting'=>"ticket_setting",
             "single_ticket_user"=>"user_single_ticket",
