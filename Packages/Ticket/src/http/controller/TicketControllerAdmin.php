@@ -38,7 +38,7 @@ class TicketControllerAdmin extends BaseController
         { $tickets=ticket::where($where);}
         $tickets=$tickets->orderBy($col,$order);
         if ($tickets!=null)
-        {$tickets=$tickets->paginate();}
+        {$tickets=$tickets->paginate(3);}
 
 
         return view("ticket::admin.ticketList",compact("col","order","priority","category","tickets"));

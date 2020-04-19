@@ -22,13 +22,14 @@
                                 </div>
                                 <div class="col-xs-12 col-sm-6 col-md-6">
                                     <div class="pull-left">
-                                       /add page
+
 
                                     </div>
                                 </div>
                             </div>
                             <!-- End row-->
                             <div class="table-responsive">
+                                @if(isset($tickets) && !empty($tickets))
                                 <table class="table mb-0 table-hover custom-tbl">
                                     <thead>
                                     <tr>
@@ -43,7 +44,9 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    @foreach($tickets as $ticket)
                                     <tr>
+
                                         <td class="text-center">
                                             <a href="{{route("user_single_ticket",["ticket"=>3])}}">کمک برای خرید</a>
                                             <span class="text-info hidden">(عادی)</span>
@@ -64,16 +67,20 @@
                                         </td>
 
                                     </tr>
+                                    @endforeach
 
 
                                     </tbody>
                                 </table>
+                                    @else
+                                <h5>تیکت جدیدی وجود ندارد</h5>
+                                @endif
                             </div>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="pull-left">
-                                        <ul class="pagination pagination-split">
-                                            //page
+                                        <ul class="pagination pagination-split mt-5">
+                                          {{$tickets->links()}}
                                         </ul>
 
                                     </div>
