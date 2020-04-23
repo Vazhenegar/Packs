@@ -9,10 +9,6 @@
 ### ticket
    - add views list ticket admin
    - add view setting view 
-   - add controller setting 
-     - add category
-     - remove category
-       
    - add controller single ticket
      - change status
      - show 
