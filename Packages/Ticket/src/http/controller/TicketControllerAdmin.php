@@ -2,9 +2,11 @@
 
 
 namespace packs\ticket\http\controller;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Auth;
 use packs\ticket\model\ticket;
+use packs\ticket\model\TicketCategory;
 use packs\ticket\model\TicketChat;
 
 class TicketControllerAdmin extends BaseController
@@ -55,9 +57,12 @@ class TicketControllerAdmin extends BaseController
 
     public function ticket_setting()
     {
-        //todo : admin_ticket_setting
-        dd("admin_ticket_setting");
 
+
+        $category=TicketCategory::where("status","!=","removed")->orderBy("created_at","desc")->get();
+        return view("ticket::admin/ticketSetting",compact("category"));
+        
     }
+
 
 }
