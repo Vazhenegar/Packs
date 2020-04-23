@@ -12,7 +12,7 @@ class ticket extends Model
     public static $ValidCols            =["user_id","TicketCategory_id","title","status","priority","created_at","update_at"];
     public static $ValidStatus          =["dont_show","removed"];
     public static $ValidOrders          =["asc","desc"];
-    public static $ValidPriority        =["normal"];
+    public static $ValidPriority        =[["fa"=>"مهم","value"=>"important"],["fa"=>"معمولی","value"=>"normal"],["fa"=>"کم","value"=>"low"]];
 
     public function getStatusAttribute($value)
     {

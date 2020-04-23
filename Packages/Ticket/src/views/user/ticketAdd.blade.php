@@ -23,11 +23,10 @@
                 <div class="form-group col-6">
                     <label>انتخاب دسته بندی</label>
                     <select class="form-control" name="category">
-                        <option>گزینه ۱</option>
-                        <option>گزینه ۲</option>
-                        <option>گزینه ۳</option>
-                        <option>گزینه ۴</option>
-                        <option>گزینه ۵</option>
+                        @foreach($category as $cat)
+                        <option value="{{$cat->id}}">{{$cat->title}}</option>
+                        @endforeach
+
                     </select>
                 </div>
 
@@ -39,12 +38,15 @@
 
                 <div class="form-group col-6">
                     <label>انتخاب اولویت</label>
+
+
                     <select class="form-control" name="priority">
-                        <option>گزینه ۱</option>
-                        <option>گزینه ۲</option>
-                        <option>گزینه ۳</option>
-                        <option>گزینه ۴</option>
-                        <option>گزینه ۵</option>
+
+
+                        @foreach($priority as $p)
+
+                        <option value="{{$p["value"]}}">{{$p["fa"]}}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="form-group  col-6">
