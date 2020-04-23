@@ -40,6 +40,7 @@ class TicketControllerAdmin extends BaseController
         if ($tickets!=null)
         {$tickets=$tickets->paginate(3);}
 
+        dd($tickets[0]->getUserAttribute()->get());
 
         return view("ticket::admin.ticketList",compact("col","order","priority","category","tickets"));
     }

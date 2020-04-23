@@ -2,6 +2,7 @@
 
 namespace packs\ticket\model;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class ticket extends Model
@@ -33,5 +34,17 @@ class ticket extends Model
     }
 
 
+    public function getUserAttribute()
+    {
+        return $this->hasOne(User::class,"id","user_id");
+    }
+    public function getTicketChatAttribute()
+    {
+        return $this->hasMany(TicketChat::class,"ticket_id","id");
+    }
+    public function getTicketCategoryAttribute()
+    {
+        return $this->hasOne(TicketCategory::class,"id","TicketCategory_id");
+    }
 
 }
