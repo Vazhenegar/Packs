@@ -8,7 +8,6 @@
     
 ### ticket
    - add views list ticket admin
-   - add view setting view 
    - add controller single ticket
      - change status
      - show 
